@@ -11,12 +11,12 @@ public class Reservation {
     private int numberOfHours;
     @ManyToOne
     @JoinColumn
-    User user;
+    private User user;
     @ManyToOne
     @JoinColumn
-    Spot spot;
+    private Spot spot;
     @OneToOne(mappedBy = "reservation",cascade = CascadeType.ALL)
-    Payment payment;
+    private Payment payment;
 
     public Reservation() {
     }
